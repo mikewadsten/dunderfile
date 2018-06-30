@@ -11,3 +11,10 @@ def my_function():
     assert __func__() == 'my_function'
     assert __func__() == helper.__func__
 my_function()
+
+
+def nested_functions():
+    def inner_function():
+        assert __func__() == "inner_function"
+        assert __func__(depth=1) == "nested_functions"
+nested_functions()
