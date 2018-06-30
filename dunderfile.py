@@ -7,7 +7,9 @@ in C code and macros.
 
 import inspect
 
-__all__ = ('dunderfile', 'dunderline', 'helper')
+__all__ = (
+        'dunderfile', 'dunderline', 'helper',
+        '__FILE__', '__LINE__', '__func__')
 __version__ = '0.0.1'
 
 # Frame records are tuples of six items:
@@ -73,7 +75,8 @@ class _dunder_helper(object):
 
     @property
     def __func__(self):
-        """Get the function name of the location where this property is used."""
+        """Get the function name of the location where this property is used.
+        """
         return dunderfunc(depth=1)
 
 
