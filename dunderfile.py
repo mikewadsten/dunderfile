@@ -8,6 +8,7 @@ in C code and macros.
 import inspect
 
 __all__ = ('dunderfile', 'dunderline', 'helper')
+__version__ = '0.0.1'
 
 # Frame records are tuples of six items:
 #  - the frame object
